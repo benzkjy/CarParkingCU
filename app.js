@@ -35,7 +35,9 @@ app.use(function(req, res, next) {
 app.use(indexRoutes);
 app.use(parkingRoutes);
 
-mongoose.connect("mongodb://localhost/parkingCU", { useMongoClient: true });
+// mongoose.connect("mongodb://localhost/parkingCU", { useMongoClient: true });
+mongoose.connect("mongodb://benz:12345@ds111123.mlab.com:11123/parkingcu", { useMongoClient: true });
+//mongodb://benz:12345@ds111123.mlab.com:11123/parkingcu
 mongoose.Promise = global.Promise;
 
 //SCHEMA SETUP
@@ -61,6 +63,6 @@ mongoose.Promise = global.Promise;
 // });
 
 
-app.listen(8000, function() {
+app.listen(process.env.PORT || 8000, function() {
     console.log("The ParkingCU Server Has Started!");
 });
