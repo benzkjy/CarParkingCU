@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <h2>CarParkCU !!!</h2>
+            <p>This is Web Appication for ProjectSE.</p>
+        </header>
+    </section>
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Portfolio -->
+                    <section>
+                        <header class="major">
+                            <h2>Car Park</h2>
+                        </header>
+                        <div class="row">
+                            <% parking.forEach(function(parking){ %>
+                                <div class="4u 12u(mobile)">
+                                    <section class="box">
+                                        <a href="/parkings/<%= parking._id %>" class="image featured">
+                                            <img src="<%= parking.image %>" alt="" />
+                                        </a>
+                                        <header>
+                                            <h3> <%= parking.name %> </h3>
+                                        </header>
+                                        <hr>
+                                        <% if(currentUser){ %>
+                                            <h6>เหลือที่จอด: <strong style="color:red"><%= parking.nowPark %></strong></h6>
+                                        <% } %>
+                                        <footer>
+                                            <a href="/parkings/<%= parking._id %>" class="button alt">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i> More Info</a>
+                                        </footer>
+                                    </section>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </section>
+                                
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer %>

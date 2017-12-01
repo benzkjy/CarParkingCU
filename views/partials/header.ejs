@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Car Park CU </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body class="homepage">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <div id="header">
+
+                <!-- Logo -->
+                <h1>
+                    <a href="/">
+                        <i class="fa fa-car" aria-hidden="true"></i> CarParkCU</a>
+                </h1>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li class="current">
+                            <a href="/">
+                                <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#">สถานที่จอดรถ
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">ฝั่งเล็ก</a>
+                                    <ul>
+                                        <li>
+                                            <a href="/parkings/5a1eeb72257f08ed941abe10">อาคารวิทยพัฒนา</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1eec900d0cf8eda7f87963">สนามกีฬาในร่ม</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1ef02f5c476aee3f7b173b">อาคารจามจุรี 9</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1efda1ab5e7aefb9c9b770">อาคารพูนทรัพย์</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1eff646076e3efe17c9ec4">บัณฑิตวิทยาลัย</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1f00c101fac8eff0d2ab36">สำนักงานวิทยทรัพยากร</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">ฝั่งสยามสแควร์</a>
+                                    <ul>
+                                        <li>
+                                            <a href="/parkings/5a1f023d37a829f00022559f">คณะเภสัชศาสตร์</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1f03703d03cef011d12ee6">ศูนย์หนังสือจุฬาฯ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">ฝั่งใหญ่</a>
+                                    <ul>
+                                        <li>
+                                            <a href="/parkings/5a1f046843c169f01c301f2b">อาคารมหาจักรีสิรินธร</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1f05457dfc0bf027ca53c7">หอประชุมจุฬาฯ</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1f065c548d7ef033089a68">ศาลาพระเกี้ยว</a>
+                                        </li>
+                                        <li>
+                                            <a href="/parkings/5a1f06feeebfc4f03bbab483">คณะพาณิชยศาสตร์และการบัญชี</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <!-- if no user -->
+                        <% if(!currentUser){ %>
+                            <li>
+                                <a href="/register">
+                                    <i class="fa fa-user-plus" aria-hidden="true"></i>Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="/login">
+                                    <i class="fa fa-user" aria-hidden="true"></i>Login</a>
+                            </li>
+                        <!-- else -->
+                        <% } else{ %>
+                        <li><i class="fa fa-user" aria-hidden="true"></i>Signed In As <strong><%= currentUser.username %></strong></li>
+                        <li>
+                            <a href="/logout">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
